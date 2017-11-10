@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 
 namespace TestAndLearn.Tests
 {
     [TestFixture()]
-    class EventAndDelegate
+    public class EventAndDelegateTest
     {
         public delegate void MyConsolWrite(string message);
         [Test]
+        ///summary
+        ///Delegate as public varialbe(property/filed) is not protected and can be easily override by clients
+        /// Event provide a protect layer for delegate and limit clients operations. 
+        ///summary
         public void Why_Need_Event_When_Delegate_Can_Do_What_Event_Do()
         {
             MyConsolWrite myConsolWrite = MyTest.ConsoleWrite;
@@ -31,7 +30,7 @@ namespace TestAndLearn.Tests
 
 
             TestDelegate testDelegate = ()=>test2.OnDummyDelegateHappened("I will have exception, that's why i should not be a public property/field. danger to be easily override");
-            Assert.Throws<Exception>(testDelegate);
+            Assert.Throws<NullReferenceException>(testDelegate);
         }
 
 
@@ -59,7 +58,7 @@ namespace TestAndLearn.Tests
 
             public static void ConsoleWrite(string message)
             {
-                ConsoleWrite(message);
+                TestContext.WriteLine(message);
             }
         }
     }
