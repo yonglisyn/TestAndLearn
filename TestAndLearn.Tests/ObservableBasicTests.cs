@@ -2,7 +2,6 @@
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Reactive.Threading.Tasks;
-using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
@@ -70,7 +69,7 @@ namespace TestAndLearn.Tests
             }
 
             // Allow some time before unsubscribing or event may not happen
-            Thread.Sleep(100);
+            System.Threading.Thread.Sleep(100);
 
             TestContext.WriteLine("Unsubscribe");
             s.Dispose();
