@@ -29,4 +29,31 @@ namespace TestAndLearn.Tests.OOP
         }
 
     }
+    internal class MyThreadSafeSingleton
+    {
+        private int _count;
+        private static MyThreadSafeSingleton _Singleton;
+        private static object sycnRoot = new object();
+        private MyThreadSafeSingleton()
+        {
+            _count++;
+        }
+        public int Count => _count;
+
+        public MyThreadSafeSingleton SafeSingleton
+        {
+            get
+            {
+                if (_Singleton == null)
+                {
+                    lock (sycnRoot)
+                    {
+                        _Singleton = new MyThreadSafeSingleton();
+                    }
+                }
+
+                return _Singleton;
+            }
+        }
+    }
 }
