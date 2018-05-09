@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using NUnit.Framework.Internal;
 
-namespace TestAndLearn.Tests
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests
 {
     [TestFixture()]
     public class ExplicitInterfaceTest

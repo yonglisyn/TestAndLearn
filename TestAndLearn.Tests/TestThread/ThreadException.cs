@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace TestAndLearn.Tests.Thread
+namespace TestAndLearn.Tests.TestThread
 {
     [TestFixture()]
     class ThreadException

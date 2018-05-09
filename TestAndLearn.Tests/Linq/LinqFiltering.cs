@@ -2,7 +2,7 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace TestAndLearn.Tests.Linq
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests.Linq
 {
     [TestFixture()]
     class LinqFiltering

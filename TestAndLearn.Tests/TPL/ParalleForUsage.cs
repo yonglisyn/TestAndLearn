@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using NUnit.Framework;
 
-namespace TestAndLearn.Tests.TPL
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests.TPL
 {
     [TestFixture()]
     class ParalleForUsage

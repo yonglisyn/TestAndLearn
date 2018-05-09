@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace TestAndLearn.Tests.OOP
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests.OOP
 {
     [TestFixture()]
     class Singleton

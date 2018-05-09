@@ -5,7 +5,7 @@ using System.Reactive.Threading.Tasks;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace TestAndLearn.Tests
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests
 {
     [TestFixture()]
     class ObservableBasicTests

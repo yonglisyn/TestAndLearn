@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 
-namespace TestAndLearn.Tests
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests
 {
     [TestFixture]
     public class AsyncException

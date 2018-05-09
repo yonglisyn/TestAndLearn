@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace TestAndLearn.Tests
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests
 {
     [TestFixture()]
     ///summary

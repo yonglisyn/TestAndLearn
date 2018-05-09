@@ -2,7 +2,7 @@
 using FluentAssert;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestAndLearn.Tests
+namespace TestAndLearn.Tests.TestThread.Tests.TestThread.Tests
 {
     [TestClass]
     public class ReferenceType
