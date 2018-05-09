@@ -75,6 +75,7 @@
     <Compile Include="Linq\LinqFiltering.cs" />
     <Compile Include="ObservableBasicTests.cs" />
     <Compile Include="OOP\Singleton.cs" />
+    <Compile Include="ReferenceInCollection\ReferenceInCollection.cs" />
     <Compile Include="ReferenceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RXBasicTest.cs" />
