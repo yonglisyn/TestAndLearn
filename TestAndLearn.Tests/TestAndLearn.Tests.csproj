@@ -69,16 +69,20 @@
   <ItemGroup>
     <Compile Include="AsyncException.cs" />
     <Compile Include="Async\AsyncInTaskRun.cs" />
+    <Compile Include="Async\ReturnTaskExecutionTime.cs" />
     <Compile Include="EventAndDelegateTest.cs" />
     <Compile Include="ExplicitInterfaceTest.cs" />
     <Compile Include="Linq\IEumerableBehavior.cs" />
     <Compile Include="Linq\LinqFiltering.cs" />
     <Compile Include="ObservableBasicTests.cs" />
     <Compile Include="OOP\Singleton.cs" />
-    <Compile Include="ReferenceInCollection\ReferenceInCollection.cs" />
+    <Compile Include="Reference\ReferenceInCollection.cs" />
     <Compile Include="ReferenceType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reference\ReferenceOfReadOnly.cs" />
     <Compile Include="RXBasicTest.cs" />
+    <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\InsertionSort.cs" />
     <Compile Include="TestThread\ThreadException.cs" />
     <Compile Include="TPL\ParalleForUsage.cs" />
   </ItemGroup>
