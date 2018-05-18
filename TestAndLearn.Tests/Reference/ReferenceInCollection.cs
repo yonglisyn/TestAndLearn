@@ -25,6 +25,57 @@ namespace TestAndLearn.Tests.ReferenceInCollection
         }
 
         [Test]
+        public void Linq_Result_After_Add_Behavior()
+        {
+            var input = new List<Dummy>();
+            var tmp = new Dummy {MyState = "A"};
+            //After add, change source still affect reference
+            input.Add(tmp);
+            tmp.MyState = "Aa";
+            Assert.AreEqual("Aa",input.First().MyState);
+            //Returns the reference, not a new copy
+        }
+        [Test]
+        public void Linq_Result_After_Select_Behavior()
+        {
+            var input = new List<Dummy>
+            {
+                new Dummy {MyState = "A"},
+                new Dummy {MyState = "B"},
+                new Dummy {MyState = "C"}
+            };
+            //Returns the reference, not a new copy
+            var tmp = input.Select(x => x);
+            input.First().MyState = "Aa";
+            Assert.AreEqual(tmp.First().MyState, input.First().MyState);
+            //Returns the reference, not a new copy
+        }
+        [Test]
+        public void Linq_Result_After_AddRange_Behavior()
+        {
+            //AddRange is adding each element one by one by reference.
+            // the change of the range reference(e.g. adding one more element) will not affect after AddRange
+            //however, the change of the reference of the each element, will affter after AddRange.
+
+
+
+            var input = new List<Dummy>
+            {
+                new Dummy {MyState = "A"},
+                new Dummy {MyState = "B"},
+                new Dummy {MyState = "C"}
+            };
+            //Returns the reference, not a new copy
+            var tmp = new List<Dummy>();
+            tmp.AddRange(input);
+            input.First().MyState = "Aa";
+            input.Add(new Dummy {MyState = "D"});
+            Assert.AreEqual(tmp.First().MyState, input.First().MyState);
+            Assert.IsTrue(tmp.Count< input.Count);
+            //Returns the reference, not a new copy
+        }
+
+        [Test]
         public void Linq_Result_Behavior_IDictionary()
         {
             var input = new Dictionary<int,Dummy>

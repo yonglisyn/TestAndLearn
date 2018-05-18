@@ -68,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncException.cs" />
+    <Compile Include="Async\AsyncExceptions.cs" />
     <Compile Include="Async\AsyncInTaskRun.cs" />
     <Compile Include="Async\ReturnTaskExecutionTime.cs" />
+    <Compile Include="Async\TaskRunInAsync.cs" />
     <Compile Include="EventAndDelegateTest.cs" />
     <Compile Include="ExplicitInterfaceTest.cs" />
     <Compile Include="Linq\IEumerableBehavior.cs" />
